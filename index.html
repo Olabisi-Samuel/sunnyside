@@ -11,21 +11,24 @@
   <body>
     <div class="bg-img">
       <div class="container">
-        <div class="topnav">
-          <a href="#"><img src="logo.svg" alt="" /></a>
-          <div class="topnav-nav">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">CONTACT</a>
-          </div>
+        <div class="navbar">
+          <a class="logo" href="#"><img src="logo.svg" alt="" /></a>
+          <ul class="topnav responsive" id="topnav-nav">
+            <li class="nav-link"><a href="#">About</a></li>
+            <li class="nav-link"><a href="#">Service</a></li>
+            <li class="nav-link"><a href="#">Projects</a></li>
+            <li class="nav-link"><a href="#">CONTACT</a></li>
+            <li class="toggleNav">
+              <a onclick="navToggle()" href="javascript:void(0)">&#9776;</a>
+            </li>
+          </ul>
         </div>
-        <div class="header-topic">
-          <h1 class="header-text">WE ARE CREATIVES</h1>
-        </div>
-        <div class="arrow-img">
-          <img src="icon-arrow-down.svg" alt="" />
-        </div>
+      </div>
+      <div class="header-topic">
+        <h1 class="header-text">WE ARE CREATIVES</h1>
+      </div>
+      <div class="arrow-img">
+        <img src="icon-arrow-down.svg" alt="" />
       </div>
     </div>
 
@@ -56,22 +59,29 @@
           <h4>Learn More</h4>
         </div3>
         <div4 class="box-5">
-          <div class="box-5-content">
-            <h3>Graphic Design</h3>
-            <p>
-              Great design make you memorable. We deliver artwork that
-              understand your brand message and capture potential client
-              attention.
-            </p>
+          <div class="box5-img">
+            <img src="image-graphic-design.jpg" alt="" />
+            <div class="box-5-content">
+              <h3>Graphic Design</h3>
+              <p>
+                Great design make you memorable. We deliver artwork that
+                understand your brand message and capture potential client
+                attention.
+              </p>
+            </div>
           </div>
         </div4>
+
         <div5 class="box-6">
-          <div class="box-6-content">
-            <h2>Photography</h2>
-            <p>
-              Increase your credibility by getting the most stunning high
-              quality photos that improve your business image.
-            </p>
+          <div class="box6-img">
+            <img src="image-photography.jpg" alt="" />
+            <div class="box-6-content">
+              <h2>Photography</h2>
+              <p>
+                Increase your credibility by getting the most stunning high
+                quality photos that improve your business image.
+              </p>
+            </div>
           </div>
         </div5>
       </div>
@@ -150,5 +160,12 @@
         <a href="#"><img src="icon-pinterest.svg" alt="" /></a>
       </div>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="file.js"></script>
   </body>
 </html>

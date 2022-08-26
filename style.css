@@ -4,6 +4,7 @@
 }
 
 .bg-img {
+  position: relative;
   background-image: url(image-header.jpg);
   min-height: 600px;
   background-position: center;
@@ -12,38 +13,43 @@
   margin: 0 auto;
 }
 
-div.topnav {
-  padding-top: 10px;
-}
-
-.topnav {
+.topnav.responsive {
   display: flex;
   justify-content: space-between;
+  float: right;
+  list-style: none;
+  padding: 10px;
 }
 
-.topnav a {
+.navbar .logo {
+  width: 18%;
+}
+
+.navbar a {
   float: left;
   text-align: center;
   padding: 14px 16px;
+  font-size: 20px;
   text-decoration: none;
-  font-size: 15px;
 }
 
-.topnav a:last-child {
+li.nav-link:nth-child(4) {
   background-color: aliceblue;
   border-radius: 20px;
 }
 
 .header-topic {
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
+  position: absolute;
+  bottom: 75%;
+  left: 33%;
+  font-size: 22px;
 }
 
 div.arrow-img {
+  position: absolute;
+  top: 45%;
+  left: 50%;
   width: 2%;
-  padding: 10% 45%;
-  margin-left: 5%;
 }
 
 img {
@@ -55,40 +61,51 @@ img {
   grid-template-columns: 50% 50%;
 }
 
-.box-5 {
-  background-image: url(image-graphic-design.jpg);
-  height: 500px;
-  text-align: center;
-}
-
 .box-5-content {
   text-align: center;
-  padding-top: 50%;
-}
-
-.box-6 {
-  background-image: url(image-photography.jpg);
-  height: 500px;
-  text-align: center;
+  /* padding-top: 50%; */
 }
 
 .box-6-content {
   text-align: center;
-  padding-top: 50%;
+  position: absolute;
+  /* padding-top: 50%; */
+}
+
+.box5-img,
+.box6-img {
+  position: relative;
+}
+
+.box-5-content,
+.box-6-content {
+  position: absolute;
+  bottom: 50px;
+}
+
+.box5-img img,
+.box6-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .box-1,
 .box-4 {
-  padding: 20%;
+  position: relative;
+  top: 40%;
+  left: 20px;
 }
 
 .section-2 {
-  padding: 7%;
+  position: relative;
+}
+
+.section-2-header {
+  padding: 5px 0px 0px 70px;
 }
 
 .section-2-text {
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 10px 0px 20px 0px;
   display: flex;
   justify-content: center;
   margin-right: 20px;
@@ -147,4 +164,41 @@ div.foot {
   display: flex;
   justify-items: center;
   justify-content: space-around;
+}
+
+.toggleNav {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1160px) {
+  .header-topic {
+    text-align: center;
+    padding: 80px 0px 0px 50px;
+    font-size: 22px;
+  }
+
+@media only screen and (max-width: 1000px) {
+  .navbar .logo {
+    width: 28%;
+  }
+
+  ul.topnav li.nav-link a {
+    display: none;
+  }
+
+  .toggleNav {
+    display: block;
+    background-color: white;
+    border: 1px;
+    border-radius: 3px;
+  }
+
+  ul.topnav.responsive {
+    flex-direction: column;
+    text-align: right;
+  }
 }
